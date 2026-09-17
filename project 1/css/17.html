@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+    <style>
+    body {  
+        font-family:'Trebuchet MS';
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 24px;
+        max-width: 950px;
+    }
+    h1 {
+        letter-spacing: -5px;
+        font-size: 55px;
+        margin-top: 0px;
+        transition: .5s;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        border: dashed;
+        border-color:rgb(189, 61, 26);
+        padding: 20px;
+        margin: auto;
+        margin-bottom: 5px;
+        position: relative;
+        max-width: 850px;
+    }
+    #title {
+        position: absolute;
+        left: 15px;
+        top: 5px;
+    }
+    #menu {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        color: rgb(120, 93, 82)
+    }
+     #top {
+        margin-top: 65px;
+    }
+    #faq {
+        flex-direction: column;
+        border: none;
+        padding: 0px;
+    }
+    .item {
+        text-align: center;
+    }
+    .price {
+        color: rgb(120, 93, 82);
+    }
+    @media screen and (max-width: 800px) {
+    .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+  }
+    h1 {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+    #top {
+        margin-top: 45px;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1 id="title">mountainhousecafe</h1>
+    <h1 id="menu"> menu</h1>
+    <h2>
+    <div class="container" id="top">
+        <div class="item">
+espresso &emsp; <a class="price">3.40</a>
+<br>
+americano &emsp; <a class="price">3.65</a>
+<br>
+macchiato &emsp; <a class="price">3.70</a>
+<br>
+cortado &emsp; <a class="price">4.00</a>
+<br>
+cappucino &emsp; <a class="price">4.50</a>
+<br>
+breve &emsp; <a class="price">4.25</a>
+<br>
+blackeye &emsp; <a class="price">4.25</a>
+<br>
+latte &emsp; <a class="price">5/5.50</a>
+        </div>
+        <div class="item">
+daily brew &emsp; <a class="price">2.95/3.50</a>
+<br>
+pour over &emsp; <a class="price">5.00</a>
+<br>
+cafe au lait &emsp; <a class="price">4.00</a>
+<br>
+cold brew &emsp; <a class="price">4.50/5</a>
+<br>
+hot chocolate &emsp; <a class="price">4/4.25</a>
+<br>
+        </div>
+        <div class="item">
+chai latte &emsp; <a class="price">4.7/5.50</a>
+<br>
+matcha latte &emsp; <a class="price">5/5.50</a>
+<br>
+london fog &emsp; <a class="price">5/5.50</a>
+<br>
+moringa &emsp; <a class="price">4.75/5.50</a>
+<br>
+mud\wtr &emsp; <a class="price">4.75/5.50</a>
+<br>
+cup of tea &emsp; <a class="price">3.00</a>
+<br>
+        </div>
+    </div>
+<div class="container">
+    <div class="item">
+bacon, egg, & cheese &emsp; <a class="price">8.25</a>
+<br>
+breakfast burrito &emsp; <a class="price">5.80/13.50</a>
+<br>
+turkey blt &emsp; <a class="price">11.25</a>
+<br>
+pastry case &emsp; <a class="price">rotates</a>
+        </div>
+        <div class="item">
+biscuits & gravy &emsp; <a class="price">6.25/8.25</a>
+<br>
+<i>'-> add eggs <a class="price">2.00</a></i>
+<br>
+french toast &emsp; <a class="price">6.25/8.25</a>
+<br>
+chicken salad sandwich &emsp; <a class="price">11.25</a>
+<br>
+        </div>
+    </div>
+<div class="container" id="faq">
+    <details>
+        <summary>syrup, milk, and tea selection</summary>
+            <p class="price">our syrups include vanilla, mocha, caramel, peppermint, hazelnut, lavender, brown sugar cinnamon, churro, white chocolate, and orange & cardamom. you can add syrup to any drink for 75¢.</p>
+            <p class="price">whole milk is our default, but we offer almond and oat milk alternatives for 60¢.</p>
+            <p class="price">our teas include earl grey, blushing, chai, mint, green, chamomile, and rose.</p><hr>
+    </details>
+    <details>
+        <summary>when we're open</summary>
+            <p class="price">we are open seven days a week! monday-thursday 7:30-2, friday-saturday 8-4:30, sunday 8-2.</p>
+            <p class="price">our kitchen is open until 1 on weekdays and until 2 on weekends.</p><hr>
+    </details>
+    <details>
+        <summary>where to find us</summary>
+            <p class="price">we are located at 2901 macklind avenue in st. louis.</p>
+            <p class="price">questions? comments? call us at 314.773.9023.</p>
+            <p class="price">check out our instagram <a style="color:rgb(189, 61, 26)" href="https://www.instagram.com/mountainhouse_cafe/">here</a>, where we announce new specials and community goings-on.</p><hr>
+    </details>
+</div>
+    </h2>
+</body>
+</html>
