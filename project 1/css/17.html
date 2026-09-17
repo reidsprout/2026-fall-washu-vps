@@ -17,6 +17,12 @@
         transition: .5s;
         display: block;
     }
+    .bigcontainer {
+        position: relative;
+        max-width: 850px;
+        left: 20px;
+        right: 20px;
+    }
     .container {
         display: flex;
         flex-direction: row;
@@ -29,16 +35,15 @@
         margin: auto;
         margin-bottom: 5px;
         max-width: 850px;
-        position: relative;
     }
     #title {
         position: absolute;
         left: 15px;
-        top: 5px;
+        top: -60px;
     }
     #menu {
         position: absolute;
-        top: 5px;
+        top: -60px;
         right: 15px;
         color: rgb(120, 93, 82)
     }
@@ -64,20 +69,31 @@
     align-items: center;
     max-width: 400px;
   }
+    .bigcontainer {
+        max-width: 400px;
+    }
     h1 {
-        font-size: 35px;
+        font-size: 30px;
         letter-spacing: -1px;
     }
     #top {
-        margin-top: 45px;
+        margin-top: 30px;
+    }
+    #menu {
+        top: -35px;
+        right: 5px;
+    }
+    #title {
+        top: -35px;
+        left: 5px;
     }
 }
     </style>
 </head>
 <body>
+<div class="bigcontainer">
     <h1 id="title">mountainhouse cafe</h1>
     <h1 id="menu"> menu</h1>
-    <h2>
     <div class="container" id="top">
         <div class="item">
 espresso &emsp; <a class="price">3.40</a>
@@ -163,6 +179,6 @@ chicken salad sandwich &emsp; <a class="price">11.25</a>
             <p class="price">check out our instagram <a style="color:rgb(189, 61, 26)" href="https://www.instagram.com/mountainhouse_cafe/">here</a>, where we announce new specials and community goings-on.</p><hr>
     </details>
 </div>
-    </h2>
+</div>
 </body>
 </html>
