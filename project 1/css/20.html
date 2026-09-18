@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MountainHouse Cafe</title>
+    <style>
+    body {
+        background-color: mintcream;
+        color: rgb(28, 49, 49);
+        text-align: center;
+        font-family: helvetica;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 80px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    div {
+        padding: 20px;
+        border: dotted;
+        border-width: 2px;
+        border-color: tomato;
+        border-radius: 10px;
+        margin: auto;
+        background-color: mintcream;
+        transition: 1s;
+        cursor: default;
+    }
+    h1 {
+        font-size: 55px;
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        transition: 1s;
+    }
+    h2 {
+        font-size: 16px;
+        margin-top: 0px;
+        margin:auto;
+        transition: 1s;
+    }
+    p {
+        max-width: 530px;
+        margin: auto;
+        line-height: 16px;
+        font-size: 14px;
+        transition: 1s;
+    }
+    .menu {
+        font-size: 24px;
+        margin-bottom: 2px;
+        transition: .2s;
+    }
+    .menu:hover {
+        rotate: 1deg;
+        cursor: default;
+    }
+    #dog {
+        margin: 0px;
+        margin-top: -5px;
+        padding: 7px;
+        transition: .5s;
+        font-size: 1.5vw;
+    }
+    #bigdog {
+        border: none;
+        color: rgba(255, 99, 71, 0.206);
+        font-size: 30px;
+        position:fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: -1;
+        padding: 0px;
+        margin: 0px;
+        max-width: 1000px;
+    }
+    #drink {
+        width: 450px;
+        transition: 1s;
+    }
+    #eat {
+        width: 520px;
+        transition: 1s;
+    }
+    #hi {
+        position: fixed;
+        bottom: 0px;
+        left:0px;
+        right: 0px;
+        padding: 8px;
+        margin-bottom: -5px;
+        z-index: 2;
+    }
+    #hi:hover {
+        p {
+            font-size: 20px;
+            line-height: 20px;
+            max-width: 700px;
+        }
+    }
+    /* tooltip */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        color: tomato;
+        cursor: pointer;
+        border: none;
+        transition: .2s;
+        padding: 0px;
+        margin: 0px;
+    }
+    .tooltiptext {
+        visibility: hidden;
+        background-color: mintcream;
+        color: tomato;
+        text-align: center;
+        padding: 5.5px;
+        max-width: 300px;
+        min-width: 200px;
+        border: dotted;
+        border-width: 2px;
+        border-radius: 10px;
+        border-bottom-right-radius: 0px;
+        position: absolute;
+        z-index: 1; 
+        bottom: 12px;
+        right: 102%;
+        transition: .15s;
+        text-wrap: pretty;
+        font-size: 12.5px;
+        opacity: 0;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        font-size: 12.5px;
+        padding: 4.5px;
+        opacity: 1;
+    }
+    .tooltip:hover {
+        color: rgb(28, 49, 49);
+        rotate: 1deg;
+    }
+    @media screen and (max-width: 650px) {
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    .menu {
+        font-size: 18px;
+    }
+    #dog {
+        font-size: 2vw;
+    }
+    p {
+        max-width: 350px;
+        font-size: 12px;
+        line-height: 13px;
+    }
+    #drink {
+        width: 300px;
+    }
+    #eat {
+        width: 320px;
+    }
+    div {
+        font-size: 8.5px;
+        padding: 20px;
+    }
+    #hi {
+        p {
+        font-size: 12px;
+        }
+    }
+    #hi:hover{
+        p {
+         font-size: 15px;
+        }
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        font-size: 10px;
+        padding: 2px;
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<!--Converted from markdown file 04-->
+<body>
+
+<div id="dog">
+    <pre><code>__        .--------------------.         __
+/  \       |     welcome to     |        /  \
+/ ..|\      | MOUNTAINHOUSE CAFE |       /|.. \
+(_\  |_)     '--------------------'      (_|  /_)
+/  \@'        @@3                          '@/  \
+/     \      @@)     .----------------.     /     \
+_   /  `   |      `@3     | M–Th 7:30-2:00 |     |   `  \   _
+\\/  \  | _\     .---._   | F-S  8:00-4:30 |     /_ |  /  \//
+\   /_ || \\_   |   |_)  | Su   8:00-2:00 |   _// || _\   /
+\____)|_) \_)  |___|    '----------------'  (_/ (_|(____/
+</code></pre>
+</div>
+    <h1>MountainHouse Cafe</h1>
+    <h2><i style="color: tomato;">Your local spot for great coffee, tea, and snacks</i></h2>
+<div id="hi">
+    <p>Come visit us! We are located at <a style="color: tomato" href="https://maps.app.goo.gl/WVqBafsS3kmreYo9A">2901 Macklind Ave, St. Louis, Missouri.</a>
+<br>
+    Questions? Comments? Reach us at <a style="color: tomato">(314)773-9023.</a></p>
+</div>
+<br>
+    <h2 class="menu">To Drink</h2>
+    
+<div id="drink">
+<pre><code>.    (                          .------------------------.</a>
+------)-....___                 |    ESPRESSO &amp; COFFEE   |
+    (          ""-.             | <div class="tooltip">Espresso -------- 3.40 <span class="tooltiptext">2oz Espresso shot</span></div>|
+     )         _.-|             | <div class="tooltip">Americano ------- 3.65<span class="tooltiptext">One espresso shot served over 8oz hot water</span></div> |
+.........---""`   |             | <div class="tooltip">Macchiato ------- 3.70<span class="tooltiptext">A shot of espresso marked with a dollop of foam</span></div> |
+                  |             | <div class="tooltip">Cortado --------- 4.00<span class="tooltiptext">A balanced blend of espresso and warm, steamed milk</span></div> |
+                  |             | <div class="tooltip">Cappucino ------- 4.50<span class="tooltiptext">Equal parts espresso, steamed milk, and foam</span></div> |
+                  |             | <div class="tooltip">Breve ----------- 4.25<span class="tooltiptext">Espresso blended with steamed half-and-half</span></div> |
+                  |             | <div class="tooltip">Blackeye -------- 4.25<span class="tooltiptext">16oz coffee with an espresso shot</span></div> |
+                  |             | <div class="tooltip">Latte --------- 5/5.50<span class="tooltiptext">2 or 3 shots of espresso with 12oz of steamed milk</span></div> |
+                  /             | <div class="tooltip">Daily Brew - 2.95/3.50<span class="tooltiptext">Freshly brewed each morning, our rotating daily coffee, strong and bold</span></div> |
+                 /              | <div class="tooltip">Pour Over ------- 5.00<span class="tooltiptext">Freshly brewed in front of you with your choice of beans (selection changes weekly)</span></div> |
+                /`""---.._      | <div class="tooltip">Cafe au Lait ---- 4.00<span class="tooltiptext">13oz Cup of drip coffee served with foamed milk</span></div> |
+               /          '-.   | <div class="tooltip">Cold Brew ----- 4.50/5<span class="tooltiptext">Our slow steeped home-brew coffee over ice</span></div> |
+          __.-'              :  | <div class="tooltip">Hot Chocolate - 4/4.25<span class="tooltiptext">With hollander chocolate sauce</span></div> |
+--...---"" (                 :  '------------------------'
+..___...--"`              _.'                             
+                  __..--""/                               
+jgs___.....----"""     _.'                                
+         _____,,..--""`                                  
+"----"""`                                                   </code></pre>
+</div>
+<br>
+    <p>We offer almond and oat milk alternatives for <a style="color: tomato">60¢.</a>
+<br>
+    Our syrups include vanilla, mocha, caramel, peppermint, hazelnut, lavender, brown sugar cinnamon, churro, white chocolate, and orange &amp; cardamom. You can add any syrup to any drink for <a style="color: tomato">75¢.</a></p>
+<br>
+<div id="drink">
+<pre><code>            .------.____         .---------------------.
+         .-'       \ ___)        |   TEA &amp; TEA LATTES  |
+      .-'         \\\            | <a class="tooltip">Chai ---- 4.75/5.50</a> |
+   .-'        ___  \\)           | <a class="tooltip">London Fog - 5/5.50</a> |
+.-'          /  (\  |)           | <a class="tooltip">Matcha ----- 5/5.50</a> |
+         __  \  ( | |            | <a class="tooltip">MUDWTR -- 4.75/5.50</a> |
+        /  \  \__'| |            | <a class="tooltip">Moringa - 4.75/5.50</a> |
+       /    \____).-'            | <a class="tooltip">Cup of Tea --- 3.00</a> |
+     .'       /   |              '---------------------'
+    /     .  /    |                                     
+  .'     / \/     |              .---------------------.
+ /      /   \     |              |    TEA SELECTION    |
+       /    /    _|_             |   <a class="tooltip">earl grey, rose</a>   |
+       \   /    /\ /\            |  <a class="tooltip">chai, mint, green,</a> |
+        \ /    /__v__\           | <a class="tooltip">chamomile, blushing</a> |
+         '    |       |          '---------------------'
+              |     .#|                                 
+              |#.  .##|                                 
+              |#######|                                 
+              |#######|                                 </code></pre>
+</div>
+<br>
+    <h2 class="menu">To Eat</h2>
+    <p  style="margin-bottom: 7px;">Our kitchen is open until <a style="color:tomato;">1pm</a> on weekdays, and until <a style="color:tomato;">2pm</a> on weekends. Our pastry case is always open and rotates daily.</p>
+<div id="eat">
+<pre><code>         (                     .---------------------------------.
+          )                    |              FOOD               |
+     __..---..__               | <div class="tooltip">Bacon, Egg, Cheese* ------ 8.25<span class="tooltiptext">Fresh-baked croissant with crispy bacon, melted provolone, and 1.5 Missouri free-range eggs</span></div> |
+ ,-='  /  |  \  `=-.           | <div class="tooltip">Biscuits &amp; Gravy* --- 6.25/8.25<span class="tooltiptext">House-baked biscuits & homemade gravy with sausage</span></div> |
+:--..___________..--;          |  <div class="tooltip">'-&gt; add eggs ------------ 2.50<span class="tooltiptext">(scrambled or over medium)</span></div> |
+ \.,_____________ ( ./         | <div class="tooltip">Breakfast Burrito* - 5.80/13.50<span class="tooltiptext">A large, warm tortilla, 3 eggs, roasted potatoes, cheddar cheese, chorizo, onions, and peppers. Served with a side of salsa</span></div> |
+                  )            | <div class="tooltip">French Toast -------- 6.25/8.25<span class="tooltiptext">Served on a home-baked croissant, with eggs and cinnamon in a cast iron pan, topped with organic maple syrup</span></div> |
+             __..---..__       | <div class="tooltip">Chicken Salad Sandwich* - 11.25<span class="tooltiptext">On a home-baked croissant – chicken breast, crisp celery, spices, eggs, red onion, and topped with fresh lettuce</span></div> |
+         ,-='  /  |  \  `=-.   | <div class="tooltip">Turkey BLT -------------- 11.25<span class="tooltiptext">On focaccia – roasted turkey, crispy bacon, provolone, and fresh tomato with grey poupon mayo</span></div> |
+        :--..___________..--;  | <div class="tooltip">Pastry Case ----------- depends<span class="tooltiptext">Selection rotates daily. Includes gluten-free and vegan options</span></div> |
+         \.,_____________,./   '---------------------------------'
+</code></pre>
+</div>
+<br>
+    <p><code style="color:tomato;">*</code> our weekday menu is limited to these items.</p>
+<div id="bigdog">
+    <pre><code>       __
+       /  \
+       / ..|\
+       (_\  |_)
+      /  \@' 
+     /     \
+_   /  `   |
+\\/  \  | _\
+   \   /_ || \\_
+     \____)|_) \_)</code></pre>
+</div>
+</body>
+</html>
