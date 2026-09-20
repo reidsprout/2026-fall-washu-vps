@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>17</title>
+    <title>MountainHouse Cafe</title>
+    <link rel="favicon" type="image/png" href="coffeecup.png">
     <style>
+    * {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+    }
     body {  
         font-family:'Trebuchet MS';
         font-weight: bold;
         align-items: center;
+        background-color: mintcream;
+    }
+    a {
+        color: black;
+        text-decoration: none;
     }
     h1 {
         letter-spacing: -5px;
@@ -21,6 +32,18 @@
         position: relative;
         max-width: 850px;
         margin: auto;
+    }
+    #title {
+        position: absolute;
+        left: 15px;
+        top: -60px;
+    }
+    #menu {
+        position: absolute;
+        top: -60px;
+        right: 15px;
+        color: rgb(120, 93, 82);
+        cursor: default;
     }
     .container {
         display: flex;
@@ -35,19 +58,48 @@
         margin-bottom: 5px;
         max-width: 850px;
     }
-    #title {
-        position: absolute;
-        left: 15px;
-        top: -60px;
-    }
-    #menu {
-        position: absolute;
-        top: -60px;
-        right: 15px;
-        color: rgb(120, 93, 82)
-    }
-     #top {
+    #top {
         margin-top: 65px;
+        position: relative;
+    }
+    #what {
+        position: absolute;
+        max-width: 845px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 265px;
+        background-color:rgb(189, 61, 26);
+        transition: opacity 1s;
+        color: mintcream;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #what:hover{
+        opacity: 0;
+    }
+    #bottom {
+        position: relative;
+    }
+    #whatt{
+        position: absolute;
+        max-width: 845px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 152px;
+        background-color:rgb(189, 61, 26);
+        transition: opacity 1s;
+        color: mintcream;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #whatt:hover {
+        opacity: 0;
     }
     #faq {
         flex-direction: column;
@@ -61,15 +113,22 @@
     .price {
         color: rgb(120, 93, 82);
     }
+    summary:hover {
+        cursor: pointer;
+    }
     @media screen and (max-width: 800px) {
     .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 400px;
-  }
+    }
+    #faq {
+        align-items: flex-start;
+    }
     .bigcontainer {
         max-width: 400px;
+        min-width: 375px;
     }
     h1 {
         font-size: 30px;
@@ -86,12 +145,20 @@
         top: -35px;
         left: 5px;
     }
+    #what {
+        max-width: 395px;
+        height: 572px;
+    }
+    #whatt {
+        max-width: 395px;
+        height: 321px;
+    }
 }
     </style>
 </head>
 <body>
 <div class="bigcontainer">
-    <h1 id="title">mountainhouse cafe</h1>
+    <h1 id="title"><a href="17.html">mountainhouse cafe</a></h1>
     <h1 id="menu"> menu</h1>
     <div class="container" id="top">
         <div class="item">
@@ -110,6 +177,9 @@ breve &emsp; <a class="price">4.25</a>
 blackeye &emsp; <a class="price">4.25</a>
 <br>
 latte &emsp; <a class="price">5/5.50</a>
+        </div>
+        <div id="what">
+        <div>to drink</div>
         </div>
         <div class="item">
 daily brew &emsp; <a class="price">2.95/3.50</a>
@@ -138,7 +208,7 @@ cup of tea &emsp; <a class="price">3.00</a>
 <br>
         </div>
     </div>
-<div class="container">
+<div class="container" id="bottom">
     <div class="item">
 bacon, egg, & cheese &emsp; <a class="price">8.25</a>
 <br>
@@ -147,6 +217,9 @@ breakfast burrito &emsp; <a class="price">5.80/13.50</a>
 turkey blt &emsp; <a class="price">11.25</a>
 <br>
 pastry case &emsp; <a class="price">rotates</a>
+        </div>
+        <div id="whatt">
+        <div>to eat</div>
         </div>
         <div class="item">
 biscuits & gravy &emsp; <a class="price">6.25/8.25</a>

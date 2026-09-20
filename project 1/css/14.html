@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>14</title>
+    <title>Mountainhouse Cafe</title>
+    <link rel="favicon" type="image/png" href="coffeecup.png">
     <style>
     body {
-        background-color: mintcream;
+        background-color: lightgoldenrodyellow;
         color: rgb(11, 27, 27);
         text-align: center;
-        font-family: helvetica;
+        font-family: monospace;
+        font-weight: bold;
         margin-top: 10px;
         margin-bottom: 20px;
         margin-left: 20px;
@@ -35,24 +37,46 @@
         font-size: 14px;
     }
     div {
+        padding: 10px;
+        border: dotted;
+        border-width: 2px;
+        border-color: olive;
+        border-radius: 3px;
+        margin: auto;
+        background-color: honeydew;
+        
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 900px;
         padding: 20px;
         border: dotted;
         border-width: 2px;
-        border-color: tomato;
-        border-radius: 10px;
+        border-color: olive;
+        border-radius: 3px;
         margin: auto;
+        background-color: honeydew;
+        box-shadow: 0px 5px 1px olive;
     }
     #dog {
-        width: 500px;
+        width: 900px;
+        box-shadow: 0px 5px 1px olive;
     }
     #drink {
         width: 450px;
+        border: none;
+        padding: 0;
+        background-color: none;
     }
     #eat {
-        width: 520px;
+        width: 900px;
+        box-shadow: 0px 5px 1px olive;
     }
     #hi {
         width: 500px;
+        box-shadow: 0px 5px 1px olive;
     }
     .menu {
         font-size: 24px;
@@ -78,32 +102,32 @@ _   /  `   |      `@3     | M–Th 7:30-2:00 |     |   `  \   _
 </div>
 
     <h1>MountainHouse Cafe</h1>
-    <h2><i style="color: tomato;">Your local spot for great coffee, tea, and snacks</i></h2>
+    <h2><i style="color: olive;">Your local spot for great coffee, tea, and snacks</i></h2>
 <br>
 <div id="hi">
-    <p>Come visit us! We are located at <a style="color: tomato">2901 Macklind Ave, St. Louis, Missouri.</a>
+    <p>Come visit us! We are located at <a style="color: olive">2901 Macklind Ave, St. Louis, Missouri.</a>
 <br>
-    View our menu below. Questions? Comments? Reach us at <a style="color: tomato">(314)773-9023.</a></p>
+    View our menu below. Questions? Comments? Reach us at <a style="color: olive">(314)773-9023.</a></p>
 </div>
 <br>
     <h2 class="menu">To Drink</h2>
-    
+<div class="container">
 <div id="drink">
 <pre><code>.    (                          .------------------------.
 ------)-....___                 |    ESPRESSO &amp; COFFEE   |
-    (          ""-.             | <a style="color:tomato;">Espresso -------- 3.40</a> |
-     )         _.-|             | <a style="color:tomato;">Americano ------- 3.65</a> |
-.........---""`   |             | <a style="color:tomato;">Macchiato ------- 3.70</a> |
-                  |             | <a style="color:tomato;">Cortado --------- 4.00</a> |
-                  |             | <a style="color:tomato;">Cappucino ------- 4.50</a> |
-                  |             | <a style="color:tomato;">Breve ----------- 4.25</a> |
-                  |             | <a style="color:tomato;">Blackeye -------- 4.25</a> |
-                  |             | <a style="color:tomato;">Latte --------- 5/5.50</a> |
-                  /             | <a style="color:tomato;">Daily Brew - 2.95/3.50</a> |
-                 /              | <a style="color:tomato;">Pour Over ------- 5.00</a> |
-                /`""---.._      | <a style="color:tomato;">Cafe au Lait ---- 4.00</a> |
-               /          '-.   | <a style="color:tomato;">Cold Brew ----- 4.50/5</a> |
-          __.-'              :  | <a style="color:tomato;">Hot Chocolate - 4/4.25</a> |
+    (          ""-.             | <a style="color:olive;">Espresso -------- 3.40</a> |
+     )         _.-|             | <a style="color:olive;">Americano ------- 3.65</a> |
+.........---""`   |             | <a style="color:olive;">Macchiato ------- 3.70</a> |
+                  |             | <a style="color:olive;">Cortado --------- 4.00</a> |
+                  |             | <a style="color:olive;">Cappucino ------- 4.50</a> |
+                  |             | <a style="color:olive;">Breve ----------- 4.25</a> |
+                  |             | <a style="color:olive;">Blackeye -------- 4.25</a> |
+                  |             | <a style="color:olive;">Latte --------- 5/5.50</a> |
+                  /             | <a style="color:olive;">Daily Brew - 2.95/3.50</a> |
+                 /              | <a style="color:olive;">Pour Over ------- 5.00</a> |
+                /`""---.._      | <a style="color:olive;">Cafe au Lait ---- 4.00</a> |
+               /          '-.   | <a style="color:olive;">Cold Brew ----- 4.50/5</a> |
+          __.-'              :  | <a style="color:olive;">Hot Chocolate - 4/4.25</a> |
 --...---"" (                 :  '------------------------'
 ..___...--"`              _.'                               
                   __..--""/                                  
@@ -111,51 +135,51 @@ jgs___.....----"""     _.'
          _____,,..--""`                                      
 "----"""`                                                   </code></pre>
 </div>
-<br>
-    <p>We offer almond and oat milk alternatives for <a style="color: tomato">60¢.</a>
-<br>
-    Our syrups include vanilla, mocha, caramel, peppermint, hazelnut, lavender, brown sugar cinnamon, churro, white chocolate, and orange &amp; cardamom. You can add any syrup to any drink for <a style="color: tomato">75¢.</a></p>
-<br>
 <div id="drink">
 <pre><code>            .------.____         .---------------------.
          .-'       \ ___)        |   TEA &amp; TEA LATTES  |
-      .-'         \\\            | <a style="color:tomato;">Chai ---- 4.75/5.50</a> |
-   .-'        ___  \\)           | <a style="color:tomato;">London Fog - 5/5.50</a> |
-.-'          /  (\  |)           | <a style="color:tomato;">Matcha ----- 5/5.50</a> |
-         __  \  ( | |            | <a style="color:tomato;">MUDWTR -- 4.75/5.50</a> |
-        /  \  \__'| |            | <a style="color:tomato;">Moringa - 4.75/5.50</a> |
-       /    \____).-'            | <a style="color:tomato;">Cup of Tea --- 3.00</a> |
+      .-'         \\\            | <a style="color:olive;">Chai ---- 4.75/5.50</a> |
+   .-'        ___  \\)           | <a style="color:olive;">London Fog - 5/5.50</a> |
+.-'          /  (\  |)           | <a style="color:olive;">Matcha ----- 5/5.50</a> |
+         __  \  ( | |            | <a style="color:olive;">MUDWTR -- 4.75/5.50</a> |
+        /  \  \__'| |            | <a style="color:olive;">Moringa - 4.75/5.50</a> |
+       /    \____).-'            | <a style="color:olive;">Cup of Tea --- 3.00</a> |
      .'       /   |              '---------------------'
     /     .  /    |                                     
   .'     / \/     |              .---------------------.
  /      /   \     |              |    TEA SELECTION    |
-       /    /    _|_             |   <a style="color:tomato;">earl grey, rose</a>   |
-       \   /    /\ /\            |  <a style="color:tomato;">chai, mint, green,</a> |
-        \ /    /__v__\           | <a style="color:tomato;">chamomile, blushing</a> |
+       /    /    _|_             |   <a style="color:olive;">earl grey, rose</a>   |
+       \   /    /\ /\            |  <a style="color:olive;">chai, mint, green,</a> |
+        \ /    /__v__\           | <a style="color:olive;">chamomile, blushing</a> |
          '    |       |          '---------------------'
               |     .#|                                 
               |#.  .##|                                 
               |#######|                                 
               |#######|                                 </code></pre>
 </div>
+</div>
+<br>
+    <p>We offer almond and oat milk alternatives for <a style="color: olive">60¢.</a>
+<br>
+    Our syrups include vanilla, mocha, caramel, peppermint, hazelnut, lavender, brown sugar cinnamon, churro, white chocolate, and orange &amp; cardamom. You can add any syrup to any drink for <a style="color: olive">75¢.</a></p>
 <br>
     <h2 class="menu">To Eat</h2>
-    <p  style="margin-bottom: 7px;">Our kitchen is open until <a style="color:tomato;">1pm</a> on weekdays, and until <a style="color:tomato;">2pm</a> on weekends. Our pastry case is always open and rotates daily.</p>
 <div id="eat">
 <pre><code>         (                     .---------------------------------.
           )                    |              FOOD               |
-     __..---..__               | <a style="color:tomato;">Bacon, Egg, Cheese* ------ 8.25</a> |
- ,-='  /  |  \  `=-.           | <a style="color:tomato;">Biscuits &amp; Gravy* --- 6.25/8.25</a> |
-:--..___________..--;          |  <a style="color:tomato;">'-&gt; add eggs ------------ 2.50</a> |
- \.,_____________ ( ./         | <a style="color:tomato;">Breakfast Burrito* - 5.80/13.50</a> |
-                  )            | <a style="color:tomato;">French Toast -------- 6.25/8.25</a> |
-             __..---..__       | <a style="color:tomato;">Chicken Salad Sandwich* - 11.25</a> |
-         ,-='  /  |  \  `=-.   | <a style="color:tomato;">Turkey BLT -------------- 11.25</a> |
+     __..---..__               | <a style="color:olive;">Bacon, Egg, Cheese* ------ 8.25</a> |
+ ,-='  /  |  \  `=-.           | <a style="color:olive;">Biscuits &amp; Gravy* --- 6.25/8.25</a> |
+:--..___________..--;          |  <a style="color:olive;">'-&gt; add eggs ------------ 2.50</a> |
+ \.,_____________ ( ./         | <a style="color:olive;">Breakfast Burrito* - 5.80/13.50</a> |
+                  )            | <a style="color:olive;">French Toast -------- 6.25/8.25</a> |
+             __..---..__       | <a style="color:olive;">Chicken Salad Sandwich* - 11.25</a> |
+         ,-='  /  |  \  `=-.   | <a style="color:olive;">Turkey BLT -------------- 11.25</a> |
         :--..___________..--;  '---------------------------------'
          \.,_____________,./                                      
 </code></pre>
 </div>
 <br>
-    <p><code style="color:tomato;">*</code> our weekday menu is limited to these items.</p>
+    <p  style="margin-bottom: 7px;">Our kitchen is open until <a style="color:olive;">1pm</a> on weekdays, and until <a style="color:olive;">2pm</a> on weekends. Our pastry case is always open and rotates daily.</p>
+    <p><code style="color:olive;">*</code> our weekday menu is limited to these items.</p>
 </body>
 </html>
