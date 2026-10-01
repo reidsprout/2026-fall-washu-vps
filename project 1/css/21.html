@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MountainHouse Cafe</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qvu2soe.css">
+    <link rel="shortcut icon" type="image/png" href="assets/piper1.png">
+<style>
+    body {
+        background-color: #32382d;
+        background-image: url("assets/Cafe_Interior.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        font-family: "sarina", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0px;
+        position: relative
+    }
+    html body {
+        overflow: hidden;
+    }
+/* colors: #FFF8DC white, #8E323B burgundy, #F0E39E butter */
+
+/* nav header */
+    #titlebox {
+        position: relative;
+        top: -10px;
+        left: 0px;
+        transition: .3s;
+        height: 170px;
+        width: 105%;
+        margin: 0px;
+        cursor: default;
+        background-color: #f0e29ed9;
+        background-image: url('assets/AdobeStock_1956870971.png');
+        background-size: 1415px;
+        background-position-x: -30px;
+        background-position-y: -835px;
+        background-repeat: repeat;
+        box-shadow: 0px 5px 30px 5px #29181aa5;
+    }
+    #titlebox:hover {
+        rotate: .3deg;
+        top: -7px
+    }
+    #title {
+        color: #8E323B;
+        rotate: -1.96deg;
+        font-size: 105px;
+        position: absolute;
+        left: 220px;
+        top: -40px;
+    }
+    #subtitle {
+        font-size: 30px;
+        color: #8E323B;
+        position: absolute;
+        left: 1120px;
+        top: 90px;
+    }
+    #nav {
+        position: absolute;
+        font-family: "alegreya", serif;
+        font-weight: bold;
+        font-size: 26px;
+        color: #8E323B;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 0px;
+        width: 105px;
+        height: 105px;
+        top: 45px;
+        left: 70px;
+    }
+    h3 {
+        display: inline-block;
+        text-align: center;
+        margin: 0px;
+        padding: 8px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 33px;
+        transition: border .2s;
+        border: dotted;
+        border-color: #8e323b00;
+        border-radius: 50%;
+    }
+    h3:hover,
+    h3.active {
+        border: dotted;
+        border-radius: 50%;
+        margin: 0px;
+        cursor: pointer;
+    }
+
+/* main menu */
+    #info-contents {
+        display: none;
+    }
+    #food-contents {
+        display: none;
+    }
+    #extra-contents {
+        display: none;
+    }
+    #stickybox {
+        position: fixed;
+        right: 20px;
+        top: 190px;
+    }
+    #mainbox {
+        position: relative;
+        rotate: 1deg;
+        background-image: url('assets/AdobeStock_1941103902.png');
+        background-size: 500px;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 600px;
+        transition: rotate .4s;
+    }
+    #mainbox:hover {
+        rotate: 2.5deg;
+    }
+    .maintitle {
+        color: #8E323B;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 18px;
+        left: 10px;
+        right: 0px;
+    }
+    .main-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        left: 105px;
+        top: 60px;
+        font-family: "alegreya", serif;
+    }
+    .food-button {
+        position: absolute;
+        color:#8E323B;
+        font-size: 24px;
+        padding: 2px;
+        top: 500px;
+        left: 300px;
+        right: 0px;
+        max-width: 100px;
+    }
+    .drink-button {
+        position: absolute;
+        color:#8E323B;
+        font-size: 24px;
+        padding: 2px;
+        top: 500px;
+        left: 300px;
+        right: 0px;
+        max-width: 100px;
+    }
+    .left-position {
+        left: 100px;
+    }
+    .extra-button {
+        position: absolute;
+        color:#8E323B;
+        font-size: 24px;
+        padding: 2px;
+        top: 500px;
+        left: 100px;
+        right: 0px;
+        max-width: 100px;
+    }
+    .right-position {
+        left: 300px;
+    }
+    .price-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        right: 105px;
+        top: 60px;
+        font-family: "alegreya", serif;
+    }
+    .price {
+        display: inline-block;
+        text-align: right;
+        cursor: default;
+        border: none;
+        transition: .2s;
+        margin: 0px;
+        line-height: 21.5px;
+        max-width: 300px;
+        color: #8E323B;
+    }
+    /* tooltip */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        text-align: left;
+        cursor: default;
+        border: none;
+        transition: .2s;
+        margin: 0px;
+        line-height: 21.5px;
+        max-width: 300px;
+    }
+    .tooltiptext {
+        visibility: hidden;
+        background-color: #F0E39E;
+        color: #8E323B;
+        text-align: center;
+        padding: 5px;
+        max-width: 300px;
+        min-width: 200px;
+        border: dotted;
+        border-width: 2px;
+        border-radius: 10px;
+        border-bottom-right-radius: 0px;
+        position: absolute;
+        z-index: 1; 
+        bottom: 12px;
+        right: 100%;
+        transition: .2s;
+        text-wrap: wrap;
+        font-size: 12.5px;
+        line-height: 15px;
+        opacity: 0;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        font-size: 12.5px;
+        padding: 4.5px;
+        opacity: 1;
+    }
+    .tooltip:hover {
+        color: #8E323B;
+    }
+    
+/* external navigation */
+    .external, a {
+        font-family: "alegreya", serif;
+        color: #FFF8DC;
+        text-align: right;
+        border: none;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 30px;
+        text-decoration: none;
+        opacity: 0%;
+        transition: .4s;
+        margin: 2px;
+    }
+    .external:hover {
+        border: none;
+        text-decoration: underline dotted;
+    }
+    #doggy {
+        position: fixed;
+        bottom: -15px;
+        left: 45px;
+        width: 215px;
+        height: 200px;
+        background-image: url('assets/piper2.png');
+        background-size: 160px;
+        background-repeat: no-repeat;
+        transition: rotate .4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+    }
+    #doggy:hover {
+        rotate: -4deg;
+        background-image: url('assets/piper1.png');
+        background-size: 150px;
+    }
+    #doggy:hover .external, a {
+        opacity: 100%;
+    }
+</style>
+</head>
+<body>
+<!--header-->
+    <div id="titlebox">
+        <h1 id="title">MountainHouse</h1>
+        <h2 id="subtitle">cafe</h2>
+        <div id="nav">
+            <h3 style="padding-bottom: 3px;" id="menu-button" class="active">menu</h3>
+            <h3 id="info-button">info</h3>
+        </div>
+    </div>
+
+<!--main-->
+    <div id="stickybox">
+        <div id="mainbox">
+<!-- drink page -->
+            <div id="drink-contents">
+                <div class="maintitle">drinks</div>
+                <div class="main-container">
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">espresso<span class="tooltiptext">2oz espresso shot</span></div>
+                    <div class="tooltip">americano<span class="tooltiptext">one espresso shot served over 8oz hot water</span></div>
+                    <div class="tooltip">macchiato<span class="tooltiptext">a shot of espresso marked with a dollop of foam</span></div>
+                    <div class="tooltip">cappucino<span class="tooltiptext">equal parts espresso, steamed milk, and foam</span></div>
+                    <div class="tooltip">breve<span class="tooltiptext">espresso blended with steamed half-and-half</span></div>
+                    <div class="tooltip">blackeye<span class="tooltiptext">16oz coffee with an espresso shot</span></div>
+                    <div class="tooltip">latte<span class="tooltiptext">2 or 3 shots of espresso with 12oz of steamed milk</span></div>
+                    <div class="tooltip">daily brew<span class="tooltiptext">freshly brewed each morning, our rotating daily coffee, strong and bold</span></div>
+                    <div class="tooltip">pour over<span class="tooltiptext">freshly brewed in front of you with your choice of beans</span></div>
+                    <div class="tooltip">cafe au lait<span class="tooltiptext">13oz cup of drip coffee served with foamed milk</span></div>
+                    <div class="tooltip">cold brew<span class="tooltiptext">our slow steeped home-brew coffee over ice</span></div>
+                    <div class="tooltip">hot chocolate<span class="tooltiptext">with hollander chocolate sauce</span></div>
+                    <div class="tooltip">matcha latte<span class="tooltiptext">matcha powder with steamed milk</span></div>
+                    <div class="tooltip">chai latte<span class="tooltiptext">chai with steamed milk</span></div>
+                    <div class="tooltip">london fog<span class="tooltiptext">earl grey, honey, and foamed milk</span></div>
+                    <div class="tooltip">moringa<span class="tooltiptext">13oz cup of drip coffee served with foamed milk</span></div>
+                    <div class="tooltip">mud\wtr<span class="tooltiptext">mix of mud\wtr mushroom mix and steamed milk</span></div>
+                    <div class="tooltip">cup of tea<span class="tooltiptext">earl grey, rose, mint, chamomile, green, chai, blushing</span></div>
+                </div>
+                <div class="price-container">
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="price">$3.40</div>
+                    <div class="price">$3.65</div>
+                    <div class="price">$3.70</div>
+                    <div class="price">$4.00</div>
+                    <div class="price">$4.50</div>
+                    <div class="price">$4.25</div>
+                    <div class="price">$4.25</div>
+                    <div class="price">$5/5.50</div>
+                    <div class="price">$2.95/3.50</div>
+                    <div class="price">$5.00</div>
+                    <div class="price">$4.00</div>
+                    <div class="price">$4.50/5</div>
+                    <div class="price">$5/5.50</div>
+                    <div class="price">$4.75/5.50</div>
+                    <div class="price">$5/5.50</div>
+                    <div class="price">$4.75/5.50</div>
+                    <div class="price">$4.75/5.50</div>
+                    <div class="price">$3.00</div>
+                </div>
+                <h3 class="food-button">food</h3>
+                <h3 class="extra-button">extras</h3>
+            </div>
+<!-- food page -->
+            <div id="food-contents">
+                <div class="maintitle">food</div>
+                <div class="main-container">
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">bacon, egg, and cheese*<span class="tooltiptext">fresh-baked croissant with crispy bacon, melted provolone, and 1.5 missouri free-range eggs</span></div>
+                    <div class="tooltip">biscuits & gravy*<span class="tooltiptext">house-baked biscuits & homemade gravy with sausage. add scrambled or over-medium eggs for $2.50</span></div>
+                    <div class="tooltip">breakfast burrito*<span class="tooltiptext">a large, warm tortilla, 3 eggs, roasted potatoes, cheddar cheese, chorizo, onions, and peppers. served with a side of salsa</span></div>
+                    <div class="tooltip">french toast<span class="tooltiptext">served on a home-baked croissant, with eggs and cinnamon in a cast iron pan, topped with organic maple syrup</span></div>
+                    <div class="tooltip">chicken salad sandwich*<span class="tooltiptext">on a home-baked croissant – chicken breast, crisp celery, spices, eggs, red onion, and topped with fresh lettuce</span></div>
+                    <div class="tooltip">turkey blt<span class="tooltiptext">on focaccia – roasted turkey, crispy bacon, provolone, and fresh tomato with grey poupon mayo</span></div>
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">our pastry case, which also features gluten-free and vegan options, rotates daily.</div>
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip"><span style="color:#8E323B">*</span>indicates our limited weekday menu.</div>
+                </div>
+                <div class="price-container">
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="price">$8.25</div>
+                    <div class="price">$6.25/8.25</div>
+                    <div class="price">$5.80/13.50</div>
+                    <div class="price">$6.25/8.25</div>
+                    <div class="price">$11.25</div>
+                    <div class="price">$11.25</div>
+                </div>
+                <h3 class="drink-button">drinks</h3>
+                <h3 class="extra-button">extras</h3>
+            </div>
+<!-- extra page -->
+            <div id="extra-contents">
+                <div class="maintitle">extras</div>
+                <div class="main-container">
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">our drinks are served with whole milk.<br>we offer almond and oat milk alternatives for 60¢.</div>
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">our syrups include vanilla, mocha, caramel, peppermint, hazelnut, lavender, brown sugar cinnamon, churro, white chocolate, and orange & cardamom.<br>you can add any syrup to any drink for 75¢.</div>
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">our kitchen is open until 1pm on weekdays and until 2pm on weekends.</div>
+                </div>
+                <h3 class="drink-button">drinks</h3>
+                <h3 class="food-button">food</h3>
+            </div>
+<!-- info page -->
+            <div id="info-contents">
+                <div class="maintitle">info</div>
+                <div class="main-container">
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">we are located at 1290 macklind ave. in the beautiful st. louis, missouri. come visit us!</div>
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">monday – thursday: 7:30 – 2:00<br>friday – saturday: 8:00 – 4:30<br>sunday: 8:00 – 2:00</div>
+                    <div class="tooltip" style="height: 21.5px;"></div>
+                    <div class="tooltip">view upcoming events (like WRITER'S UNBLOCK) and menu specials on our instagram.</div>
+            </div>
+            </div>
+        </div>
+    </div>
+<!--external nav-->
+    <div id="doggy">
+        <h3 class="external"><a href="https://mountainhousecafe.square.site">order</a></h3>
+        <h3 class="external"><a href="https://www.instagram.com/mountainhouse_cafe/">insta</a></h3>
+    </div>
+
+<!--js-->
+    <script src="../../assets/jquery-4.0.0.min.js"></script>
+    <script>
+        console.log('hi');
+        $(function(){
+            $('#menu-button').hover(function(){
+                $(this).addClass('active');
+                $('#info-button').removeClass('active');
+            });
+            $('#info-button').hover(function(){
+                $(this).addClass('active');
+                $('#menu-button').removeClass('active');
+            });
+             $('#menu-button').click(function(){
+                $(this).addClass('active');
+                $('#info-button').removeClass('active');
+                $('.food-button').show().removeClass('left-position');
+                $('.extra-button').show().removeClass('right-position');
+                $('#drink-contents').show();
+                $('#info-contents').hide();
+                $('#food-contents').hide();
+                $('#extra-contents').hide();
+            });
+            $('#info-button').click(function(){
+                $(this).addClass('active');
+                $('#menu-button').removeClass('active');
+                $('#info-contents').show();
+                $('#drink-contents').hide();
+                $('#food-contents').hide();
+                $('#extra-contents').hide();
+            });
+            $('.extra-button').click(function(){
+                $(this).hide().removeClass('right-position');
+                $('.drink-button').show().removeClass('left-position');
+                $('.food-button').show().addClass('left-position');
+                $('#menu-button').addClass('active');
+                $('#info-contents').hide();
+                $('#drink-contents').hide();
+                $('#food-contents').hide();
+                $('#extra-contents').show();
+            });
+            $('.food-button').click(function(){
+                $(this).hide();
+                $('.drink-button').show().addClass('left-position');
+                $('.extra-button').show().addClass('right-position');
+                $('#menu-button').addClass('active');
+                $('#info-contents').hide();
+                $('#drink-contents').hide();
+                $('#food-contents').show();
+                $('#extra-contents').hide();
+            });
+            $('.drink-button').click(function(){
+                $(this).hide().removeClass('left-position');
+                $('.food-button').show().removeClass('left-position');
+                $('.extra-button').show().removeClass('right-position');
+                $('#menu-button').addClass('active');
+                $('#info-contents').hide();
+                $('#drink-contents').show();
+                $('#food-contents').hide();
+                $('#extra-contents').hide();
+            });
+        });
+    </script>
+</body>
+</html>
