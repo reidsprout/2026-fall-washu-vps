@@ -82,6 +82,11 @@
         margin-top: 10px;
         height: 90px;
     }
+    .container:hover .double-number-container{
+        opacity: 1;
+        margin-top: 10px;
+        height: 40px;
+    }
     .number-container {
         opacity: 0;
         display: flex;
@@ -89,7 +94,16 @@
         justify-content: space-evenly;
         margin: 0px;
         transition: .5s ease-in;
-        height: 5px;
+        height: 3px;
+    }
+    .double-number-container {
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0px;
+        transition: .5s ease-in;
+        height: 3px;
     }
     .number {
         transition: 1s;
@@ -179,14 +193,14 @@
         </div>
         <div class="container">
             <div class="container-title">CSS & HTML</div>
-            <div class="number-container">
+            <div class="double-number-container">
                 <div class="number"><a href="html/06.html">11</a></div>
                 <div class="number"><a href="html/07.html">12</a></div>
                 <div class="number"><a href="html/08.html">13</a></div>
                 <div class="number"><a href="html/09.html">14</a></div>
                 <div class="number"><a href="html/10.html">15</a></div>
             </div>
-            <div class="number-container">
+            <div class="double-number-container">
                 <div class="number"><a href="html/06.html">16</a></div>
                 <div class="number"><a href="html/07.html">17</a></div>
                 <div class="number"><a href="html/08.html">18</a></div>
