@@ -7,31 +7,188 @@
     <link rel="shortcut icon" type="image/png" href="doggy.png">
 </head>
 <body>
-    <h1>Reid's Class Homepage :–J</h1>
-    <hr>
-    <details>
-    <summary><strong>Exercises</strong></summary>
-        <code><ul>
-            <li><a href="profile.html">01. Profile</a></li>
-            <li><a href="https://www.figma.com/design/Jzg8cdvoXIfK3bViZ9Jtfv/Exercise--Poster?node-id=53-2&p=f">02. Figma Posters</a></li>
-        </ul></code>
-    </details>
-    <br>
-    <details>
-    <summary><strong>Reading & Media Responses</strong></summary>
-        <code><ul>
-            <li><a href="reading1.html">01. Why Restaurant Websites...</a></li>
-            <li><a href="reading2.html">02. The New Turing Test</a></li>
-        </ul></code>
-    </details>
-    <br>
-    <details>
-        <summary><strong>Projects</strong></summary>
-        <code><ul>
-            <li><a href="project 1/index.html">01. Restaurant Menu Variations</a></li>
-            <li>02. Book to Website</li>
-            <li>03. Standby Mode</li>
-        </ul></code>
-    </details>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 01</title>
+    <style>
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        background-color: rgb(30, 28, 26);
+        background-image: url("assets/AdobeStock_504393750 copy 2.png");
+        background-size: 100%;
+        color: snow;
+        margin: 0px;
+        padding: 0px;
+    }
+    h1 {
+        display: inline-block;
+        position: fixed;
+        font-size: 40px;
+        transition: .1s ease-in-out;
+        cursor: default;
+    }
+    a:hover, h1:hover, #subject-title:hover, #subject:hover{
+        font-style: italic;
+        color: royalblue;
+    }
+    #project {
+        left: 50px;
+        bottom: 0px;
+    }
+    #title {
+        right: 50px;
+        bottom: 0px;
+    }
+    #subject {
+        font-size: 25px;
+        left: 70px;
+        top: 10px;
+        color: rgb(66, 67, 75)
+    }
+    #subject-title {
+        font-size: 25px;
+        right: 70px;
+        top: 10px;
+        color: rgb(66, 67, 75)
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+        border: solid;
+        border-width: 1px;
+        border-radius: 20px;
+        height: 650px;
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        transition: .2s;
+        min-width: 200px;
+    }
+    .container-title {
+        cursor: default;
+    }
+    .container {
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        border: solid;
+        border-width: 1px;
+        border-radius: 20px;
+        height: 20px;
+        transition: .8s;
+    }
+    .container:hover{
+        height: 120px;
+    }
+    .container:hover .number-container{
+        opacity: 1;
+        margin-top: 10px;
+        height: 90px;
+    }
+    .number-container {
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0px;
+        transition: .5s ease-in;
+        height: 5px;
+    }
+    .number {
+        transition: 1s;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .number:hover {
+        padding: 10px;
+    }
+    .bottom-container {
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        border: solid;
+        border-width: 1px;
+        border-radius: 20px;
+        height: 20px;
+        transition: .5s
+    }
+    .bottom-container:hover {
+        height: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: snow;
+    }
+/*media*/
+    @media screen and (max-width: 800px) {
+        #project {
+            bottom: 40px;
+        }
+        #title {
+            left: 50px;
+            right: none;
+        }
+        .main-container {
+            height: 615px;
+        }
+    }
+    @media screen and (max-width: 590px) {
+        .main-container {
+            height: 615px;
+        }
+        #subject-title {
+            top: 40px;
+            left: 70px;
+        }
+    }
+    @media screen and (max-width: 370px) {
+        #project {
+            bottom: 90px;
+        }
+        .main-container {
+            height: 565px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1 id="subject">Homepage</h1>
+    <h1 id="subject-title">(welcome)</h1>
+    <h1 id="project">Reid's</h1>
+    <h1 id="title">Class Website</h1>
+    <div class="main-container">
+        <div class="container">
+            <div class="container-title">Exercises</div>
+            <div class="number-container">
+                <div class="number"><a href="profile.html">01</a></div>
+                <div class="number"><a href="markdown/02.md">02</a></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-title">Projects</div>
+            <div class="number-container">
+                <div class="number"><a href="project 1/index.html">01</a></div>
+                <div class="number"><a href="">02</a></div>
+                <div class="number"><a href="">03</a></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-title">Readings</div>
+            <div class="number-container">
+                <div class="number"><a href="reading1.html">01</a></div>
+                <div class="number"><a href="reading2.html">02</a></div>
+                <div class="number"><a href="reading3.html">03</a></div>
+            </div>
+        </div>
+        <div class="bottom-container"><a href="https://arkellermann.myportfolio.com">Portfolio</a></div>
+    </div>
+</body>
+</html>
 </body>
 </html>
