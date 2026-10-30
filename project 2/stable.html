@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stable</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon_gestel.png">
+    <style>
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+    }
+    a {
+        color: black;
+        text-decoration:none;
+        transition: 1s;
+    }
+    a:hover {
+        color: royalblue;
+    }
+    .other {
+        color: royalblue;
+    }
+    .other:hover {
+        color: black;
+    }
+    .active {
+        color: black;
+    }
+    .inactive {
+        color: royalblue;
+    }
+    .onOff {
+        cursor: pointer;
+    }
+    .header {
+        border-bottom: solid;
+        background-color: white;
+        padding: 10px;
+        padding-top: 15px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    .header-item {
+        position: fixed;
+    }
+    #carousel {
+        left: 80px;
+    }
+    #stable {
+        left: 170px;
+    }
+    #field {
+        left: 240px;
+    }
+    #about {
+        right: 55px;
+    }
+    #backhome {
+        right: 10px;
+        font-size: 28px;
+    }
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
+        right: 0px;
+    }
+    .stable {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-content: end;
+        overflow-x: hidden;
+        width: 800px;
+        border-left: solid;
+        margin-top: 40px;
+        right: 0px;
+        bottom: 40px;
+    }
+    .stableColumnA {
+        width: 400px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-self: end;
+    }
+    .stableColumnB {
+        width: 400px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .backToTop {
+        width: 800px;
+        height: 150px;
+        border-top: solid;
+        background: white;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 40px;
+        justify-content: center;
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .backToTop:hover {
+        padding-top: 25px;
+    }
+    .stableBox img {
+        width: 400px;
+        display: block; 
+        transition: 1s;
+    }
+    .stableBox {
+        position: relative;
+    }
+    .tooltiptext {
+        background-color: white;
+        color: rgba(0, 0, 0, 0);
+        text-align: center;
+        padding-top: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 390px;
+        height: 0px;
+        border-top: solid;
+        position: absolute;
+        z-index: 1; 
+        bottom: 0px;
+        transition: 1s;
+        text-wrap: wrap;
+        cursor: pointer;
+    }
+    .textActive {
+        visibility: hidden;
+        transition: 1s;
+    }
+    .textInactive {
+        visibility: hidden;
+        transition: 1s;
+    }
+    .stableBox:hover .textActive {
+        visibility: visible;
+        height: 50px;
+        color: black;
+    }
+    .stableBox:hover img{
+        width: 410px;
+    }
+    .onOff {
+        position: fixed;
+        left: 10px;
+        bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+    #on {
+        transition: 1s;
+    }
+    #off {
+        transition: 1s;
+    }
+    .footer {
+        position: fixed;
+        border-top: solid;
+        width: 100%;
+        height: 40px;
+        bottom: 0px;
+        background-color: white;
+        z-index: 3;
+    }
+    .preloader {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+        animation: fadeOut 2.2s ease 3.9s forwards;
+    }
+    @keyframes fadeOut {
+    to {
+    opacity: 0;
+    visibility: hidden;
+    }
+    }
+    .preloadimg {
+        position: fixed;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        margin-top: -110px;
+        margin-left: -80px;
+        display: block;
+        z-index: 5;
+        animation: moveCorner 2s ease 2s forwards;
+    }
+    @keyframes moveCorner {
+    to {
+    margin-top: 0px;
+    margin-left: 0px;
+    top: 5px;
+    left: 9px;
+    height: 40px;
+    }
+    }
+    </style>
+</head>
+<body>
+    <img src="assets/favicon_gestel.png" alt="leo gestel" style="height: 100px;" class="preloadimg">
+    <div class="preloader"><div>the horses are back in their stable.</div></div>
+    
+    <div class="header">
+        <div class="header-item" id="carousel"><a href="carousel.html" class="other">Carousel</a></div>
+        <div class="header-item" id="stable"><a href="stable.html">Stable</a></div>
+        <div class="header-item" id="field"><a href="" class="other">Field</a></div>
+        <div class="header-item" id="about"><a href=" ">About</a></div>
+        <div class="header-item" id="backhome"><a href="https://reidsprout.github.io/2026-fall-washu-vps/">***</a></div>
+    </div>
+    <div class="container">
+        <div class="stable">
+            <div class="stableColumnA">
+                <div class="stableBox" id="first"><span class="tooltiptext" class="textActive">A bronze aquamanile made in the Middle East, 1200 - 1300.</span><img src="assets/whole pics/aquamanile.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive" >A lithograph by George Caitlin, 1844.</span><img src="assets/whole pics/caitlin.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A drawing by Giorgio de Chirico, 1908–1947.</span><img src="assets/whole pics/chirico.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture by Edgar Degas, 1874-1876</span><img src="assets/whole pics/degas2.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">An ink drawing by Leo Gestel, 1891 - 1941.</span><img src="assets/whole pics/gestel.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze statuette from Greece, 8th century BCE.</span><img src="assets/whole pics/greek.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">An engraving by Albrecht Dürer, 1505.</span><img src="assets/whole pics/durer.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A paleolithic cave painting in Lascaux, 15,000 - 17,000 BCE</span><img src="assets/whole pics/lascaux.jpg"></div>
+            </div>
+                <div class="stableColumnB">
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture made in the Eastern Han dynasty, 25-220 CE.</span><img src="assets/whole pics/celestial.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A porcelain dish made in China, 1600 - 1625.</span><img src="assets/whole pics/chinesedish.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A terracotta statuette made in Cypriot, late 4th century BCE.</span><img src="assets/whole pics/cypriot.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">An earthenware sculpture made in the Tang Dynasty, 725-750 CE.</span><img src="assets/whole pics/Equestrienne.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A lithograph by Natalia Goncharova, 1914.</span><img src="assets/whole pics/goncharova.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A painting from India, 16th-17th century.</span><img src="assets/whole pics/India.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture by Antoine-Louis Barye, 1835 - 1850.</span><img src="assets/whole pics/Hippogriff.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A drawing by my mother, 1985 - 1995</span><img src="assets/whole pics/mama.jpeg"></div>
+            </div>
+            <div class="backToTop"><div style="rotate: 90deg; font-size: 150px; width: 200px;"><a href="#first">↩︎</a></div></div>
+        </div>
+    </div>
+    <div class="onOff">
+        <div id="on" class="active">info on</div>
+        <div>&emsp;/&emsp;</div>
+        <div id="off" class="inactive">info off</div>
+    </div>
+    <div class="footer"></div>
+
+    <script>
+        const on = document.querySelector('#on');
+        const off = document.querySelector('#off');
+        const tooltiptexts = document.querySelectorAll('.tooltiptext');
+        on.addEventListener('click', () => {
+            on.classList.add('active');
+            on.classList.remove('inactive');
+            off.classList.remove('active');
+            off.classList.add('inactive');
+            tooltiptexts.forEach(tooltiptext => {
+                tooltiptext.classList.add('textActive');
+                tooltiptext.classList.remove('textInactive');
+                });
+        });
+        off.addEventListener('click', () => {
+            off.classList.add('active');
+            off.classList.remove('inactive');
+            on.classList.remove('active');
+            on.classList.add('inactive');
+            tooltiptexts.forEach(tooltiptext => {
+                tooltiptext.classList.remove('textActive');
+                tooltiptext.classList.add('textInactive');
+                });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            tooltiptexts.forEach(tooltiptext => {
+                tooltiptext.classList.add('textActive');
+                tooltiptext.classList.remove('textInactive');
+                });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+        targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',   
+        inline: 'start' 
+        });
+        }
+        });
+        });
+    </script>
+</body>

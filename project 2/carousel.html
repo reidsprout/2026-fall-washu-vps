@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon_gestel.png">
+    <style>
+
+    /* https://css-tricks.com/pure-css-horizontal-scrolling/ */
+    
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+    }
+    a {
+        color: black;
+        text-decoration:none;
+        transition: 1s;
+    }
+    a:hover {
+        color: royalblue;
+    }
+    .other {
+        color: royalblue;
+    }
+    .other:hover {
+        color: black;
+    }
+    .header {
+        border-bottom: solid;
+        padding: 10px;
+        padding-top: 15px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header-item {
+        position: absolute;
+    }
+    #carousel {
+        left: 80px;
+    }
+    #about {
+        right: 55px;
+    }
+    #backhome {
+        right: 10px;
+        font-size: 28px;
+    }
+    #stable {
+        left: 170px;
+    }
+    #field {
+        left: 240px;
+    }
+    .horizontal-scroll-wrapper {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        left: -780px;
+        bottom: -100px;
+        width: 750px;
+        height: 120vw;
+        margin: 0px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transform: rotate(90deg);
+        transform-origin: right bottom;
+    }
+    .scroll-item {
+        transform: rotate(-90deg) translateY(-200px);
+        transform-origin: right bottom;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: 1s;
+        max-height: 400px;
+        min-height: 300px;
+        width: 700px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .scroll-item:hover {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        rotate: -1deg;
+    }
+    .infotext {
+        display: inline-block;
+        visibility: hidden;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        opacity: 0;
+        transition: 2s;
+        z-index: 4;
+    }
+    .scroll-item:hover .infotext {
+        visibility: visible;
+        opacity: 1;
+    }
+    #first {
+        justify-content: flex-end;
+        width: 150px;
+        margin-top: 550px;
+        margin-bottom: 0px;
+        padding-left: 10px;
+    }
+    #last {
+        justify-content: flex-end;
+        width: 150px;
+        margin-bottom: -250px;
+    }
+    .footer {
+        position: fixed;
+        border-top: solid;
+        width: 100%;
+        height: 40px;
+        bottom: 0px;
+        background-color: white;
+        z-index: 2;
+    }
+    .preloader {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+        animation: fadeOut 2.2s ease 3.9s forwards;
+    }
+    @keyframes fadeOut {
+    to {
+    opacity: 0;
+    visibility: hidden;
+    }
+    }
+    .preloadimg {
+        position: fixed;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        margin-top: -110px;
+        margin-left: -80px;
+        display: block;
+        z-index: 4;
+        animation: moveCorner 2s ease 2s forwards;
+    }
+    @keyframes moveCorner {
+    to {
+    margin-top: 0px;
+    margin-left: 0px;
+    top: 5px;
+    left: 9px;
+    height: 40px;
+    }
+    }
+    </style>
+</head>
+<body>
+    <img src="assets/favicon_gestel.png" alt="leo gestel" style="height: 100px;" class="preloadimg">
+    <div class="preloader"><div>a herd of horses passes by...</div></div>
+
+    <div class="header">
+        <div class="header-item" id="carousel"><a href="carousel.html">Carousel</a></div>
+        <div class="header-item" id="stable"><a href="stable.html"class="other">Stable</a></div>
+        <div class="header-item" id="field"><a href="" class="other">Field</a></div>
+        <div class="header-item" id="about"><a href=" ">About</a></div>
+        <div class="header-item" id="backhome"><a href="https://reidsprout.github.io/2026-fall-washu-vps/">***</a></div>
+    </div>
+    <div class="horizontal-scroll-wrapper">
+        <div class="scroll-item" id="last"><a href="#first" style="font-size: 100px;">↩︎</a></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/aquamanile.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/caitlin.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/celestial.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/chinesedish.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/chirico.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/cypriot.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/degas2.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/durer.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/Equestrienne.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/gestel.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/goncharova.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/greek.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/India.png" style="height: 700px"></div></div>
+        <div class="scroll-item"><div><img src="assets/cutouts/Hippogriff.png" style="height: 700px"></div></div>
+        <div class="scroll-item" id="first"><a href="#last" style="font-size: 100px; transform: scaleX(-1);">↩︎</a></div>
+    </div>
+    <div class="footer"></div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+        targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',   // Controls vertical alignment
+        inline: 'start'     // Controls horizontal alignment ('start', 'center', 'end')
+        });
+        }
+        });
+        });
+    </script>
+</body>
+</html>
