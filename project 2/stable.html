@@ -65,10 +65,52 @@
     }
     #about {
         right: 55px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    #about:hover {
+        color: royalblue;
     }
     #backhome {
         right: 10px;
         font-size: 28px;
+    }
+        .aboutBox {
+        border: solid;
+        background-color: white;
+        width: 500px;
+        height: 300px;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.496));
+    }
+    .aboutBox div {
+        padding: 10px;
+    }
+    #exit {
+        font-size: 30px;
+        cursor: pointer;
+        transition: .2s;
+    }
+    #exit:hover {
+        color: royalblue;
+        rotate: 1deg;
+    }
+    .aboutactive {
+        visibility: visible;
+        opacity: 1;
+    }
+    .aboutinactive {
+        visibility: hidden;
+        opacity: 0;
     }
     .container {
         display: flex;
@@ -213,6 +255,10 @@
         display: block;
         z-index: 5;
         animation: moveCorner 2s ease 2s forwards;
+        transition: 1s;
+    }
+    .preloadimg:hover {
+        rotate: 2deg;
     }
     @keyframes moveCorner {
     to {
@@ -232,21 +278,32 @@
     <div class="header">
         <div class="header-item" id="carousel"><a href="carousel.html" class="other">Carousel</a></div>
         <div class="header-item" id="stable"><a href="stable.html">Stable</a></div>
-        <div class="header-item" id="field"><a href="" class="other">Field</a></div>
-        <div class="header-item" id="about"><a href=" ">About</a></div>
+        <!-- <div class="header-item" id="field"><a href="" class="other">Field</a></div> -->
+        <div class="header-item" id="about">About</div>
         <div class="header-item" id="backhome"><a href="https://reidsprout.github.io/2026-fall-washu-vps/">***</a></div>
     </div>
     <div class="container">
         <div class="stable">
             <div class="stableColumnA">
                 <div class="stableBox" id="first"><span class="tooltiptext" class="textActive">A bronze aquamanile made in the Middle East, 1200 - 1300.</span><img src="assets/whole pics/aquamanile.jpg"></div>
-                <div class="stableBox"><span class="tooltiptext" class="textActive" >A lithograph by George Caitlin, 1844.</span><img src="assets/whole pics/caitlin.jpg"></div>
-                <div class="stableBox"><span class="tooltiptext" class="textActive">A drawing by Giorgio de Chirico, 1908–1947.</span><img src="assets/whole pics/chirico.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A lithograph by George Caitlin, 1844.</span><img src="assets/whole pics/caitlin.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A drawing by Giorgio de Chirico, 1908 - 1947.</span><img src="assets/whole pics/chirico.jpg"></div>
                 <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture by Edgar Degas, 1874-1876</span><img src="assets/whole pics/degas2.jpg"></div>
                 <div class="stableBox"><span class="tooltiptext" class="textActive">An ink drawing by Leo Gestel, 1891 - 1941.</span><img src="assets/whole pics/gestel.jpg"></div>
                 <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze statuette from Greece, 8th century BCE.</span><img src="assets/whole pics/greek.jpeg"></div>
                 <div class="stableBox"><span class="tooltiptext" class="textActive">An engraving by Albrecht Dürer, 1505.</span><img src="assets/whole pics/durer.jpg"></div>
-                <div class="stableBox"><span class="tooltiptext" class="textActive">A paleolithic cave painting in Lascaux, 15,000 - 17,000 BCE</span><img src="assets/whole pics/lascaux.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A haniwa from Japan, 5th - 6th century.</span><img src="assets/whole pics/japanesehorse.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A lithograph by Jirí Salamoun, 1982.</span><img src="assets/whole pics/jiri-salamoun.Jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A drawing by Koba (Wild Horse), 1876.</span><img src="assets/whole pics/koba.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A lead statuette from Laconia, Greece.</span><img src="assets/whole pics/laconian.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A paleolithic cave painting in Lascaux, 15,000 - 17,000 BCE.</span><img src="assets/whole pics/lascaux.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze bit cheekpiece from Iran, 8th - 7th century BCE.</span><img src="assets/whole pics/Luristan.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">An iron statuette from Mali, early 20th century.</span><img src="assets/whole pics/malian.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture by Marino Marini, 1942 - 1952.</span><img src="assets/whole pics/marini.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A drypoint print by the Master of the Amsterdam Cabinet, 1473 - 1477.</span><img src="assets/whole pics/meester.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A pottery statuette from Ptolemaic Egypt, 305 - 330 BCE.</span><img src="assets/whole pics/ptolemaic.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture by Frederic Remington, 1895.</span><img src="assets/whole pics/remington.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A woodblock print by Kitagawa Utamaro, 1800.</span><img src="assets/whole pics/utamaro.jpg"></div>
             </div>
                 <div class="stableColumnB">
                 <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture made in the Eastern Han dynasty, 25-220 CE.</span><img src="assets/whole pics/celestial.jpg"></div>
@@ -256,7 +313,17 @@
                 <div class="stableBox"><span class="tooltiptext" class="textActive">A lithograph by Natalia Goncharova, 1914.</span><img src="assets/whole pics/goncharova.jpg"></div>
                 <div class="stableBox"><span class="tooltiptext" class="textActive">A painting from India, 16th-17th century.</span><img src="assets/whole pics/India.jpeg"></div>
                 <div class="stableBox"><span class="tooltiptext" class="textActive">A bronze sculpture by Antoine-Louis Barye, 1835 - 1850.</span><img src="assets/whole pics/Hippogriff.jpg"></div>
-                <div class="stableBox"><span class="tooltiptext" class="textActive">A drawing by my mother, 1985 - 1995</span><img src="assets/whole pics/mama.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A molded copper weathervane by A.L. Jewell & Co., 1852 - 1867.</span><img src="assets/whole pics/jewell.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">An ink scroll by Torii Kiyotada IV, 1910 - 1920.</span><img src="assets/whole pics/kiyotada.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A woodblock print by Amano Kunihiro, 1957.</span><img src="assets/whole pics/Kunihiro.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A steel armor set by Kunz Lochner, 1548.</span><img src="assets/whole pics/lochner.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A drawing by my mother, 1985 - 1995.</span><img src="assets/whole pics/mama.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A painting by Franz Marc, 1911.</span><img src="assets/whole pics/marc.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A woodblock print by Urushibara Mokuchū, 1960.</span><img src="assets/whole pics/Mokuchu.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">An ink drawing by Vilmos Pogány, 1922.</span><img src="assets/whole pics/pogany.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">An ivory comb from Egypt, 1290 - 1244 BCE.</span><img src="assets/whole pics/Ramesside.jpeg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A watercolor painting by Pyara Singh, 1855.</span><img src="assets/whole pics/singh.jpg"></div>
+                <div class="stableBox"><span class="tooltiptext" class="textActive">A wood sculpture from Northern Africa, 1500-1900.</span><img src="assets/whole pics/tellem.jpg"></div>
             </div>
             <div class="backToTop"><div style="rotate: 90deg; font-size: 150px; width: 200px;"><a href="#first">↩︎</a></div></div>
         </div>
@@ -266,9 +333,30 @@
         <div>&emsp;/&emsp;</div>
         <div id="off" class="inactive">info off</div>
     </div>
+    <div class="aboutBox" class="aboutinactive">
+        <div>About</div>
+        <div style="font-weight: normal;">this is some text about the website. by me. reid!</div>
+        <div id="exit">↩︎</div>
+    </div>
     <div class="footer"></div>
 
     <script>
+        const exit = document.querySelector('#exit');
+        const about = document.querySelector('#about');
+        const aboutBox = document.querySelector('.aboutBox');
+        about.addEventListener('click', () => {
+            aboutBox.classList.remove('aboutinactive');
+            aboutBox.classList.add('aboutactive');
+        });
+        exit.addEventListener('click', () => {
+            aboutBox.classList.add('aboutinactive');
+            aboutBox.classList.remove('aboutactive');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            aboutBox.classList.add('aboutinactive');
+            aboutBox.classList.remove('aboutactive');
+        });
+
         const on = document.querySelector('#on');
         const off = document.querySelector('#off');
         const tooltiptexts = document.querySelectorAll('.tooltiptext');
