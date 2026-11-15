@@ -1,0 +1,19 @@
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        background-color: rgb(30, 28, 26);
+        background-image: url("../assets/background.png");
+        background-size: 100%;
+        color: rgb(248, 234, 225);
+        margin: 10px;
+    }
+    a {
+        color: royalblue;
+    }
+    a:hover {
+        font-style: normal
+    }
+    p {
+        max-width: 65ch;
+        letter-spacing: .2px;
+    }
